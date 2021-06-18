@@ -39,6 +39,7 @@ html{
   margin-bottom: 2vw;
   margin-top: 2vw;
   border-radius: 10px;
+  border: 1px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.90), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
 }
 .timeline ul li:hover{
@@ -92,6 +93,8 @@ html{
     width: 2vw;
     background-color: var(--font-secondary);
     border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.90), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
     top: 0;
   }
   .timeline ul li:nth-child(odd):after{
