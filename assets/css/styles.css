@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+:root{
+  --font-primary:#eee;
+  --font-secondary:#222;
+  --bg-primary:#999;
+  --bg-secondary:#333;
+}
 *{
   padding: 0;
   margin: 0;
@@ -6,7 +12,7 @@
 }
 html{
   font-family: 'Montserrat', sans-serif;
-  color: #eee;
+  color: var(--font-primary);
 }
 .container{
   min-height: 100vh;
@@ -14,7 +20,7 @@ html{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: var(--bg-primary);
 }
 .timeline{
   width: 80%;
@@ -30,7 +36,13 @@ html{
 
 .timeline ul li{
   padding: 2vw;
-  background-color: #333;
-  margin: 1vw;
+  background-color: var(--bg-secondary);
+  margin: 2vw;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.90), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+  
+}
+.timeline ul li:hover{
+  background-color: white;
+  color:black;
 }
