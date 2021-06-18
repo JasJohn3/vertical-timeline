@@ -23,9 +23,8 @@ html{
   background-color: var(--bg-primary);
 }
 .timeline{
-  width: 80%;
+  width: 90%;
   height: auto;
-  max-width: 800px;
   margin: 0 auto;
   position: relative;
 }
@@ -37,12 +36,60 @@ html{
 .timeline ul li{
   padding: 2vw;
   background-color: var(--bg-secondary);
-  margin: 2vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.90), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
-  
 }
 .timeline ul li:hover{
   background-color: white;
   color:black;
+}
+
+.timeline-content h1{
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 2vw;
+  text-align: center;
+}
+.timeline-content p{
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+@media only screen and (min-width:768px){
+  .timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    width: .5vw;
+    transform: translateX(-50%);
+    background-color:var(--font-secondary);
+  }
+  .timeline ul li{
+    width: 50%;
+    position: relative;
+  }
+  .timeline ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-2vw);
+  }
+  .timeline ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(2vw);
+  }
+}
+@media screen and (max-width:768px){
+  .timeline-content p{
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+  }
+  .timeline-content h1{
+    font-size: 3vw;
+  }
 }
